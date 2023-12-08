@@ -5,12 +5,19 @@ import {
   faComment,
   faArrowLeft,
   faArrowRight,
+  faBookmark
 } from "@fortawesome/free-solid-svg-icons";
 
-
-
-
-const ArticleCard = ({ image, title, time, content, author }) => {
+const ArticleCard = ({
+  urlToImage,
+  title,
+  time,
+  content,
+  author,
+  className,
+  cardWithDescription,
+  id,
+}) => {
   const [isDetailed, setIsDetailed] = useState(false);
 
   const toggleDetailedView = () => {
@@ -18,18 +25,47 @@ const ArticleCard = ({ image, title, time, content, author }) => {
   };
 
   return (
-    <div className="flex flex-col m-2 bg-slate-900 rounded-sm shadow-md w-96">
-      <div className="w-full h-60 overflow-hidden rounded-t-sm">
-        <img src={image} alt="Article" className="w-full h-full object-cover" />
+    <div
+      className={`${className}  ${
+        isDetailed ? "h-full" : "h-auto"
+      } max-h-[30rem] flex justify-between rounded-sm shadow-md w-auto min-w-[250px] border border-gray-800`}
+    >
+      {/* <div> */}
+      <div
+        className={`${
+          id === 0 || id === 5 ? "sm:w-full md:w-1/2" : "w-full h-1/2"
+        } overflow-hidden rounded-t-sm`}
+      >
+        <img
+          src={urlToImage}
+          alt="Article"
+          className="w-full h-full object-cover"
+        />
       </div>
 
-      <div className={`p-4 pt-8 ${isDetailed ? "h-full" : "h-[14rem]"}`}>
-        <p className="text-gray-400 text-sm mb-2 border border-gray-400 w-fit py-px px-4">
-          tag
-        </p>
-        <h2 className="text-gray-300 text-lg my-4 font-serif">{title}</h2>
-        <div className="flex items-center justify-between mt-4">
-          <div className="flex">
+      <div
+        className={`p-6 pt-8 ${
+          id === 0 || id === 5
+            ? "h-full w-1/2 sm:w-full md:w-1/2"
+            : "h-auto w-full"
+        } flex flex-col justify-between `}
+      >
+        <div className="flex flex-col justify-start">
+          <h2 className={`${cardWithDescription ? 'text-2xl' : 'text-lg'} text-gray-300 my-4 font-serif`}>{title}</h2>
+          {cardWithDescription && (
+            <>
+            <span className="bg-slate-800 h-px mt-2"></span>
+            <p className=" text-gray-300 font-serif text-sm font-extralight tracking-wide mt-4">
+              {cardWithDescription}
+            </p>
+            </>
+          )}
+        </div>
+   
+        <div className="flex flex-col items-start justify-end mt-4">
+        <span className="bg-slate-800 h-px w-full my-4"></span>
+          <div className="flex justify-between w-full">
+            <div className="flex">
             <p className="text-gray-400 flex items-center mr-4 font-light text-xs">
               <FontAwesomeIcon icon={faClock} className="mr-2" />
 
@@ -39,20 +75,26 @@ const ArticleCard = ({ image, title, time, content, author }) => {
             <p className="text-gray-400 flex items-center font-light text-xs">
               <FontAwesomeIcon icon={faComment} className="mr-2" />4
             </p>
+            </div>
+         
+            <p className="text-gray-400 font-light text-sm">
+              <FontAwesomeIcon icon={faBookmark} />
+            </p>
           </div>
-          <button
+   
+          {/* <button
             onClick={toggleDetailedView}
             className="text-slate-400 text-sm font-sans p-2 hover:underline focus:outline-none w-fit"
           >
             <FontAwesomeIcon icon={faArrowRight} className="mr-2" />
-          </button>
+          </button> */}
         </div>
 
         {isDetailed && (
           <DetailedCard
             content={content}
             author={author}
-            image={image}
+            image={urlToImage}
             title={title}
             time={time}
             toggleDetailedView={toggleDetailedView}
@@ -62,7 +104,6 @@ const ArticleCard = ({ image, title, time, content, author }) => {
     </div>
   );
 };
-
 
 ////////////////////////////////////////////
 

@@ -79,6 +79,87 @@ const dummyArticles = [
     urlToImage:
       "https://images.unsplash.com/photo-1541873676-a18131494184?q=80&w=2036&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
+  {
+    author: "Jane Smith",
+    content: `Retired NASA astronaut Mary Cleave, a veteran of two NASA spaceflights, died Nov. 27. She was 76. A scientist with training in civil and environmental engineering, as well as biological sciences and microbial ecology, Cleave was the first woman to serve as an associate administrator for NASA’s Science Mission Directorate.
+
+        Born in Southampton, New York, Cleave received a Bachelor of Science degree in biological sciences from Colorado State University, Fort Collins, in 1969, and Master of Science in microbial ecology and a doctorate in civil and environmental engineering, both from Utah State University, Logan, in 1975 and 1979, respectively.
+        
+        “I’m sad we’ve lost trail blazer Dr. Mary Cleave, shuttle astronaut, veteran of two spaceflights, and first woman to lead the Science Mission Directorate as associate administrator,” said NASA Associate Administrator Bob Cabana. “Mary was a force of nature with a passion for science, exploration, and caring for our home planet. She will be missed.”
+        
+        Cleave was selected as an astronaut in May 1980. Her technical assignments included flight software verification in the SAIL (Shuttle Avionics Integration Laboratory), spacecraft communicator on five space shuttle flights, and malfunctions procedures book and crew equipment design.
+        
+        Cleave launched on her first mission, STS-61B, aboard space shuttle Atlantis on Nov. 26,1985. During the flight, the crew deployed communications satellites, conducted two six-hour spacewalks to demonstrate space station construction techniques, operated the Continuous Flow Electrophoresis experiment for McDonnell Douglas and a Getaway Special container for Telesat and tested the Orbiter Experiments Digital Autopilot.
+        
+        Cleave’s second mission, STS-30, which also was on Atlantis, launched May 4, 1989. It was a four-day flight during which the crew successfully deployed the Magellan Venus exploration spacecraft, the first planetary probe to be deployed from a space shuttle. Magellan arrived at Venus in August 1990 and mapped more than 95% of the surface. In addition, the crew also worked on secondary payloads involving indium crystal growth, electrical storms, and Earth observation studies.
+        
+        Cleave transferred from NASA’s Johnson Space Center in Houston to the agency’s Goddard Space Flight Center in Greenbelt, Maryland in May 1991. There, she worked in the Laboratory for Hydrospheric Processes as the project manager for SeaWiFS (Sea-viewing, Wide-Field-of-view-Sensor), an ocean color sensor which monitored vegetation globally.
+        
+        In March 2000, she went to serve as deputy associate administrator for advanced planning in the Office of Earth Science at NASA’s Headquarters in Washington. From August 2005 to February 2007, Cleave was the associate administrator for NASA’s Science Mission Directorate where she guided an array of research and scientific exploration programs for planet Earth, space weather, the solar system, and the universe. She also oversaw an assortment of grant-based research programs and a diverse constellation of spacecraft, from small, principal investigator-led missions to large flagship missions.
+        
+        Cleave’s awards included: two NASA Space Flight medals; two NASA Exceptional Service medals; an American Astronautical Society Flight Achievement Award; a NASA Exceptional Achievement Medal; and NASA Engineer of the Year.`,
+    description: "Sample description for the third article",
+    publishedAt: "2023-12-02T10:30:00Z",
+    source: { id: "anotherexample", name: "Another Example News" },
+    title: "NASA Remembers Trailblazing Astronaut, Scientist Mary Cleave",
+    url: "https://www.example.com/third-article",
+    urlToImage:
+      "https://images.unsplash.com/photo-1541873676-a18131494184?q=80&w=2036&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    author: "Jane Smith",
+    content: `Retired NASA astronaut Mary Cleave, a veteran of two NASA spaceflights, died Nov. 27. She was 76. A scientist with training in civil and environmental engineering, as well as biological sciences and microbial ecology, Cleave was the first woman to serve as an associate administrator for NASA’s Science Mission Directorate.
+
+        Born in Southampton, New York, Cleave received a Bachelor of Science degree in biological sciences from Colorado State University, Fort Collins, in 1969, and Master of Science in microbial ecology and a doctorate in civil and environmental engineering, both from Utah State University, Logan, in 1975 and 1979, respectively.
+        
+        “I’m sad we’ve lost trail blazer Dr. Mary Cleave, shuttle astronaut, veteran of two spaceflights, and first woman to lead the Science Mission Directorate as associate administrator,” said NASA Associate Administrator Bob Cabana. “Mary was a force of nature with a passion for science, exploration, and caring for our home planet. She will be missed.”
+        
+        Cleave was selected as an astronaut in May 1980. Her technical assignments included flight software verification in the SAIL (Shuttle Avionics Integration Laboratory), spacecraft communicator on five space shuttle flights, and malfunctions procedures book and crew equipment design.
+        
+        Cleave launched on her first mission, STS-61B, aboard space shuttle Atlantis on Nov. 26,1985. During the flight, the crew deployed communications satellites, conducted two six-hour spacewalks to demonstrate space station construction techniques, operated the Continuous Flow Electrophoresis experiment for McDonnell Douglas and a Getaway Special container for Telesat and tested the Orbiter Experiments Digital Autopilot.
+        
+        Cleave’s second mission, STS-30, which also was on Atlantis, launched May 4, 1989. It was a four-day flight during which the crew successfully deployed the Magellan Venus exploration spacecraft, the first planetary probe to be deployed from a space shuttle. Magellan arrived at Venus in August 1990 and mapped more than 95% of the surface. In addition, the crew also worked on secondary payloads involving indium crystal growth, electrical storms, and Earth observation studies.
+        
+        Cleave transferred from NASA’s Johnson Space Center in Houston to the agency’s Goddard Space Flight Center in Greenbelt, Maryland in May 1991. There, she worked in the Laboratory for Hydrospheric Processes as the project manager for SeaWiFS (Sea-viewing, Wide-Field-of-view-Sensor), an ocean color sensor which monitored vegetation globally.
+        
+        In March 2000, she went to serve as deputy associate administrator for advanced planning in the Office of Earth Science at NASA’s Headquarters in Washington. From August 2005 to February 2007, Cleave was the associate administrator for NASA’s Science Mission Directorate where she guided an array of research and scientific exploration programs for planet Earth, space weather, the solar system, and the universe. She also oversaw an assortment of grant-based research programs and a diverse constellation of spacecraft, from small, principal investigator-led missions to large flagship missions.
+        
+        Cleave’s awards included: two NASA Space Flight medals; two NASA Exceptional Service medals; an American Astronautical Society Flight Achievement Award; a NASA Exceptional Achievement Medal; and NASA Engineer of the Year.`,
+    description: "Sample description for the third article",
+    publishedAt: "2023-12-02T10:30:00Z",
+    source: { id: "anotherexample", name: "Another Example News" },
+    title: "NASA Remembers Trailblazing Astronaut, Scientist Mary Cleave",
+    url: "https://www.example.com/third-article",
+    urlToImage:
+      "https://images.unsplash.com/photo-1541873676-a18131494184?q=80&w=2036&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    author: "Jane Smith",
+    content: `Retired NASA astronaut Mary Cleave, a veteran of two NASA spaceflights, died Nov. 27. She was 76. A scientist with training in civil and environmental engineering, as well as biological sciences and microbial ecology, Cleave was the first woman to serve as an associate administrator for NASA’s Science Mission Directorate.
+
+        Born in Southampton, New York, Cleave received a Bachelor of Science degree in biological sciences from Colorado State University, Fort Collins, in 1969, and Master of Science in microbial ecology and a doctorate in civil and environmental engineering, both from Utah State University, Logan, in 1975 and 1979, respectively.
+        
+        “I’m sad we’ve lost trail blazer Dr. Mary Cleave, shuttle astronaut, veteran of two spaceflights, and first woman to lead the Science Mission Directorate as associate administrator,” said NASA Associate Administrator Bob Cabana. “Mary was a force of nature with a passion for science, exploration, and caring for our home planet. She will be missed.”
+        
+        Cleave was selected as an astronaut in May 1980. Her technical assignments included flight software verification in the SAIL (Shuttle Avionics Integration Laboratory), spacecraft communicator on five space shuttle flights, and malfunctions procedures book and crew equipment design.
+        
+        Cleave launched on her first mission, STS-61B, aboard space shuttle Atlantis on Nov. 26,1985. During the flight, the crew deployed communications satellites, conducted two six-hour spacewalks to demonstrate space station construction techniques, operated the Continuous Flow Electrophoresis experiment for McDonnell Douglas and a Getaway Special container for Telesat and tested the Orbiter Experiments Digital Autopilot.
+        
+        Cleave’s second mission, STS-30, which also was on Atlantis, launched May 4, 1989. It was a four-day flight during which the crew successfully deployed the Magellan Venus exploration spacecraft, the first planetary probe to be deployed from a space shuttle. Magellan arrived at Venus in August 1990 and mapped more than 95% of the surface. In addition, the crew also worked on secondary payloads involving indium crystal growth, electrical storms, and Earth observation studies.
+        
+        Cleave transferred from NASA’s Johnson Space Center in Houston to the agency’s Goddard Space Flight Center in Greenbelt, Maryland in May 1991. There, she worked in the Laboratory for Hydrospheric Processes as the project manager for SeaWiFS (Sea-viewing, Wide-Field-of-view-Sensor), an ocean color sensor which monitored vegetation globally.
+        
+        In March 2000, she went to serve as deputy associate administrator for advanced planning in the Office of Earth Science at NASA’s Headquarters in Washington. From August 2005 to February 2007, Cleave was the associate administrator for NASA’s Science Mission Directorate where she guided an array of research and scientific exploration programs for planet Earth, space weather, the solar system, and the universe. She also oversaw an assortment of grant-based research programs and a diverse constellation of spacecraft, from small, principal investigator-led missions to large flagship missions.
+        
+        Cleave’s awards included: two NASA Space Flight medals; two NASA Exceptional Service medals; an American Astronautical Society Flight Achievement Award; a NASA Exceptional Achievement Medal; and NASA Engineer of the Year.`,
+    description: "Sample description for the third article",
+    publishedAt: "2023-12-02T10:30:00Z",
+    source: { id: "anotherexample", name: "Another Example News" },
+    title: "NASA Remembers Trailblazing Astronaut, Scientist Mary Cleave",
+    url: "https://www.example.com/third-article",
+    urlToImage:
+      "https://images.unsplash.com/photo-1541873676-a18131494184?q=80&w=2036&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
 ];
 
 export default dummyArticles;
