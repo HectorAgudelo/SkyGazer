@@ -152,7 +152,8 @@ const dummyArticles = [
         In March 2000, she went to serve as deputy associate administrator for advanced planning in the Office of Earth Science at NASA’s Headquarters in Washington. From August 2005 to February 2007, Cleave was the associate administrator for NASA’s Science Mission Directorate where she guided an array of research and scientific exploration programs for planet Earth, space weather, the solar system, and the universe. She also oversaw an assortment of grant-based research programs and a diverse constellation of spacecraft, from small, principal investigator-led missions to large flagship missions.
         
         Cleave’s awards included: two NASA Space Flight medals; two NASA Exceptional Service medals; an American Astronautical Society Flight Achievement Award; a NASA Exceptional Achievement Medal; and NASA Engineer of the Year.`,
-    description: "Sample description for the third article",
+    description:
+      "Cleave was selected as an astronaut in May 1980. Her technical assignments included flight software verification in the SAIL (Shuttle Avionics Integration Laboratory)",
     publishedAt: "2023-12-02T10:30:00Z",
     source: { id: "anotherexample", name: "Another Example News" },
     title: "NASA Remembers Trailblazing Astronaut, Scientist Mary Cleave",

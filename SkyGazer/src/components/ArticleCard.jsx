@@ -5,7 +5,7 @@ import {
   faComment,
   faArrowLeft,
   faArrowRight,
-  faBookmark
+  faBookmark,
 } from "@fortawesome/free-solid-svg-icons";
 
 const ArticleCard = ({
@@ -28,60 +28,67 @@ const ArticleCard = ({
     <div
       className={`${className}  ${
         isDetailed ? "h-full" : "h-auto"
-      } max-h-[30rem] flex justify-between rounded-sm shadow-md w-auto min-w-[250px] border border-gray-800`}
+      } bg-gray-800 flex justify-between rounded-sm shadow-md w-auto min-w-[14rem]  max-h-[26rem]`}
     >
-      {/* <div> */}
       <div
         className={`${
-          id === 0 || id === 5 ? "sm:w-full md:w-1/2" : "w-full h-1/2"
-        } overflow-hidden rounded-t-sm`}
+          id % 5 === 0 || id === 0
+            ? " sm:w-full md:w-1/2 h-full "
+            : "w-full h-2/3"
+        } overflow-hidden rounded-t-sm `}
       >
         <img
           src={urlToImage}
           alt="Article"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-center"
         />
       </div>
 
       <div
-        className={`p-6 pt-8 ${
-          id === 0 || id === 5
-            ? "h-full w-1/2 sm:w-full md:w-1/2"
-            : "h-auto w-full"
-        } flex flex-col justify-between `}
+        className={`p-4 sm:pt-4 md:pt-6 ${
+          id % 5 === 0 || id === 0
+            ? " w-full sm:w-full md:w-1/2 sm:min-h-[16rem] md:min-h-[20rem]"
+            : " w-full"
+        } h-auto flex flex-col justify-between `}
       >
         <div className="flex flex-col justify-start">
-          <h2 className={`${cardWithDescription ? 'text-2xl' : 'text-lg'} text-gray-300 my-4 font-serif`}>{title}</h2>
+          <h2
+            className={`${
+              cardWithDescription ? "text-lg sm:text-lg md:text-xl" : "text-lg"
+            } text-gray-300 my-2 font-serif`}
+          >
+            {title}
+          </h2>
           {cardWithDescription && (
             <>
-            <span className="bg-slate-800 h-px mt-2"></span>
-            <p className=" text-gray-300 font-serif text-sm font-extralight tracking-wide mt-4">
-              {cardWithDescription}
-            </p>
+              <span className="bg-slate-700 h-px mt-2"></span>
+              <p className=" text-gray-300 font-serif text-xs lg:text-sm font-extralight tracking-wide mt-4">
+                {cardWithDescription}
+              </p>
             </>
           )}
         </div>
-   
+
         <div className="flex flex-col items-start justify-end mt-4">
-        <span className="bg-slate-800 h-px w-full my-4"></span>
+          <span className="bg-slate-700 h-px w-full my-2"></span>
           <div className="flex justify-between w-full">
             <div className="flex">
-            <p className="text-gray-400 flex items-center mr-4 font-light text-xs">
-              <FontAwesomeIcon icon={faClock} className="mr-2" />
+              <p className="text-gray-400 flex items-center mr-4 font-light text-xs">
+                <FontAwesomeIcon icon={faClock} className="mr-2" />
 
-              {/* add function to calculate time? */}
-              {time}
-            </p>
-            <p className="text-gray-400 flex items-center font-light text-xs">
-              <FontAwesomeIcon icon={faComment} className="mr-2" />4
-            </p>
+                {/* add function to calculate time? */}
+                {time}
+              </p>
+              <p className="text-gray-400 flex items-center font-light text-xs">
+                <FontAwesomeIcon icon={faComment} className="mr-2" />4
+              </p>
             </div>
-         
+
             <p className="text-gray-400 font-light text-sm">
               <FontAwesomeIcon icon={faBookmark} />
             </p>
           </div>
-   
+
           {/* <button
             onClick={toggleDetailedView}
             className="text-slate-400 text-sm font-sans p-2 hover:underline focus:outline-none w-fit"
