@@ -3,11 +3,15 @@ import { getAPOD } from "./APIs/NasaApi";
 import getNews from "./APIs/NewsAPI";
 import ArticleCard from "./components/ArticleCard";
 import dummyArticles from "./dummyData";
+import fetchData from "./APIs/fetchServer";
 
 function App() {
   // getAPOD().then (res => console.log(res))
 
   // getNews().then (res => console.log(res))
+
+  fetchData().then((res) => console.log(res));
+
 
   return (
     <>
