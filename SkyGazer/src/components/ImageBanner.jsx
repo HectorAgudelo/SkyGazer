@@ -16,7 +16,7 @@ const result = {
 };
 
 function ImageBanner() {
-  //getAPOD().then((res) => console.log(res));
+ // getAPOD().then((res) => console.log(res));
   const { media_type, thumbnail_url, title, explanation, date, url } = result;
   const containerRef = useRef(null);
   const [scrollTop, setScrollTop] = useState(0);
@@ -55,18 +55,21 @@ function ImageBanner() {
 
       <div className=" flex flex-col justify-center absolute top-0 left-0 p-6 bg-slate-800 opacity-97 font-sans w-1/2 h-[100vh] overflow-auto">
         <div className="h-[100vh] overflow-auto snap-y snap-mandatory">
-        <div className="h-screen snap-start flex flex-col justify-center items-center">
-  <h3 className="text-center mb-4 uppercase text-red-700">Image of the day</h3>
-  <h2 className="text-7xl md:text-8xl font-serif text-center">{title}</h2>
-  {/* <div >
+          <div className="h-screen snap-start flex flex-col justify-center items-center">
+            <h3 className="text-center mb-4 uppercase text-red-700">
+              Image of the day
+            </h3>
+            <h2 className="text-5xl sm:text-5xl md:text-7xl lg:text-8xl font-serif text-center">
+              {title}
+            </h2>
+            {/* <div >
     <FontAwesomeIcon icon={faArrowCircleDown} />
   </div> */}
-</div>
+          </div>
 
-    
-          <div className="h-[100vh] flex flex-col justify-center snap-start font-thin">
+          <div className="h-[100vh] flex flex-col justify-center snap-start px-6">
             <p className="text-sm mt-6">{date}</p>
-            <p className="text-nd md:text-[1rem] mt-2">{explanation}</p>
+            <p className="font-extralight text-md md:text-[1rem] mt-2 ">{explanation}</p>
           </div>
         </div>
       </div>
