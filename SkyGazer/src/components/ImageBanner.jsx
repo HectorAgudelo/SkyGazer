@@ -1,5 +1,9 @@
 import { getAPOD } from "../APIs/NasaApi";
 
+import React, { useState, useRef } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowCircleDown } from "@fortawesome/free-solid-svg-icons";
+
 const result = {
   date: "2023-12-11",
   explanation:
@@ -14,6 +18,13 @@ const result = {
 function ImageBanner() {
   //getAPOD().then((res) => console.log(res));
   const { media_type, thumbnail_url, title, explanation, date, url } = result;
+  const containerRef = useRef(null);
+  const [scrollTop, setScrollTop] = useState(0);
+
+  const handleScroll = (event) => {
+    const { target } = event;
+    setScrollTop(target.scrollTop);
+  };
 
   const renderMedia = () => {
     if (media_type === "video") {
@@ -39,15 +50,25 @@ function ImageBanner() {
   };
 
   return (
-    <div className="relative text-white rounded-lg overflow-hidden">
-      {renderMedia()}
-      <div className="flex flex-col justify-center absolute top-0 left-0 p-6 bg-slate-800 opacity-90 font-sans font-thin w-1/2 h-full">
-        <h3>Image of the day</h3>
-        <h2 className="text-4xl md:text-5xl font-serif">{title}</h2>
-        <span className="h-px w-full bg-slate-300 mt-6" ></span>
-        <p className="text-sm mt-6">{date}</p>
-        <p className="text-sm md:text-[1rem] mt-2">{explanation}</p>
-      
+    <div className="relative text-white rounded-lg h-[100vh]">
+      <div className="absolute top-0 left-0 z-2 w-full"> {renderMedia()} </div>
+
+      <div className=" flex flex-col justify-center absolute top-0 left-0 p-6 bg-slate-800 opacity-97 font-sans w-1/2 h-[100vh] overflow-auto">
+        <div className="h-[100vh] overflow-auto snap-y snap-mandatory">
+        <div className="h-screen snap-start flex flex-col justify-center items-center">
+  <h3 className="text-center mb-4 uppercase text-red-700">Image of the day</h3>
+  <h2 className="text-7xl md:text-8xl font-serif text-center">{title}</h2>
+  {/* <div >
+    <FontAwesomeIcon icon={faArrowCircleDown} />
+  </div> */}
+</div>
+
+    
+          <div className="h-[100vh] flex flex-col justify-center snap-start font-thin">
+            <p className="text-sm mt-6">{date}</p>
+            <p className="text-nd md:text-[1rem] mt-2">{explanation}</p>
+          </div>
+        </div>
       </div>
     </div>
   );
