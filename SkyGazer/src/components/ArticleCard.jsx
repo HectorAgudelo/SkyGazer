@@ -28,14 +28,14 @@ const ArticleCard = ({
     <div
       className={`${className}  ${
         isDetailed ? "h-full" : "h-auto"
-      } bg-gray-800 flex justify-between rounded-sm shadow-md w-auto min-w-[14rem]  max-h-[26rem]`}
+      } bg-gray-800 flex justify-between rounded-sm shadow-md w-auto min-w-[14rem]  max-h-[28rem]`}
     >
       <div
         className={`${
           id % 5 === 0 || id === 0
             ? " sm:w-full md:w-1/2 h-full "
             : "w-full h-2/3"
-        } overflow-hidden rounded-t-sm `}
+        } overflow-hidden rounded-t-sm min-h-[10rem]  `}
       >
         <img
           src={urlToImage}

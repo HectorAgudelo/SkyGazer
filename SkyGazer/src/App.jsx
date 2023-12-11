@@ -3,6 +3,7 @@ import { getAPOD } from "./APIs/NasaApi";
 import getNews from "./APIs/NewsAPI";
 import ArticleCard from "./components/ArticleCard";
 import dummyArticles from "./dummyData";
+import ImageBanner from "./components/ImageBanner";
 
 function App() {
   // getAPOD().then (res => console.log(res))
@@ -11,8 +12,9 @@ function App() {
 const longDummy = Array(2).fill(dummyArticles).flat();
   return (
     <>
-      <h1>SkyGazer</h1>
-      <div className=" flex items-center justify-center w-full h-full">
+      {/* <h1>SkyGazer</h1> */}
+      <ImageBanner/>
+      {/* <div className=" flex items-center justify-center w-full h-full">
         <div className=" grid p-2 gap-6  grid-cols-1 sm:grid-cols-1  md:grid-cols-2 lg:grid-cols-3 w-11/12 sm:w-11/12 md:w-10/12 lg:9/12 xl:w-8/12">
           {longDummy.map((article, index) => (
             <ArticleCard
@@ -30,7 +32,7 @@ const longDummy = Array(2).fill(dummyArticles).flat();
             />
           ))}
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
