@@ -1,0 +1,9 @@
+{
+  "query": "cosmology OR astrophotography OR astrophysics OR NASA",
+  "sortBy": "popularity",
+  "language": "en",
+  "dateStart": "2023-12-01",
+  "collectionName": "articles",
+  "limit": 100,
+  "pathToServiceKey": "./skygazer-firestore-service-keys.json"
+}
