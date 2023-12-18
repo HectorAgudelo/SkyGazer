@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faClock,
@@ -18,16 +18,26 @@ const ArticleCard = ({
   cardWithDescription,
   id,
 }) => {
-  const [isDetailed, setIsDetailed] = useState(false);
+  const navigate = useNavigate();
 
-  const toggleDetailedView = () => {
-    setIsDetailed(!isDetailed);
+
+  const navigateToDetailedArticle = () => {
+    navigate(`article/${id}`, {
+      state: {
+        content,
+        author,
+        urlToImage,
+        title,
+        time,
+        id,
+      },
+    });
   };
 
   return (
     <div
-      className={`${className}  ${
-        isDetailed ? "h-full" : "h-auto"
+      className={`${className} 
+      h-auto
       } bg-gray-800 flex justify-between rounded-sm shadow-md w-auto min-w-[14rem]  max-h-[26rem]`}
     >
       <div
@@ -89,24 +99,13 @@ const ArticleCard = ({
             </p>
           </div>
 
-          {/* <button
-            onClick={toggleDetailedView}
+          <button
+            onClick={navigateToDetailedArticle}
             className="text-slate-400 text-sm font-sans p-2 hover:underline focus:outline-none w-fit"
           >
             <FontAwesomeIcon icon={faArrowRight} className="mr-2" />
-          </button> */}
+          </button>
         </div>
-
-        {isDetailed && (
-          <DetailedCard
-            content={content}
-            author={author}
-            image={urlToImage}
-            title={title}
-            time={time}
-            toggleDetailedView={toggleDetailedView}
-          />
-        )}
       </div>
     </div>
   );
@@ -114,14 +113,14 @@ const ArticleCard = ({
 
 ////////////////////////////////////////////
 
-const DetailedCard = ({
-  content,
-  author,
-  image,
-  title,
-  time,
-  toggleDetailedView,
-}) => {
+const DetailedCard = ({}) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { content, author, urlToImage, title, time } = location.state;
+  const navigateBackToArticleList = () => {
+    navigate("/");
+  };
+
   return (
     <div className="w-full h-full absolute top-0 left-0 ">
       <div className="w-full h-full relative max-h-[60vh]">
@@ -130,7 +129,7 @@ const DetailedCard = ({
           {title}
         </h2>
         <img
-          src={image}
+          src={urlToImage}
           alt="Article"
           className="w-full h-full object-cover absolute z-0"
         />
@@ -149,7 +148,7 @@ const DetailedCard = ({
           <span className="font-light">{author}</span>
         </p>
         <p className="text-gray-400 mt-14">{content}</p>
-        <button onClick={toggleDetailedView}>
+        <button onClick={navigateBackToArticleList}>
           <FontAwesomeIcon icon={faArrowLeft} className="mt-6 text-slate-400" />
         </button>
       </div>
@@ -157,4 +156,4 @@ const DetailedCard = ({
   );
 };
 
-export default ArticleCard;
+export { ArticleCard, DetailedCard };
