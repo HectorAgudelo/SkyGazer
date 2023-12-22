@@ -1,7 +1,7 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import ArticleList from './components/ArticleList';
-import { DetailedCard } from './components/ArticleCard';
+import ArticleList from "./components/ArticleList";
+import { DetailedCard } from "./components/ArticleCard";
 
 function App() {
   return (
