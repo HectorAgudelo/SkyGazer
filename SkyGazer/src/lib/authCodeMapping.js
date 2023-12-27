@@ -9,6 +9,9 @@ export function mapAuthCodeToMessage(authCode) {
     case "auth/email-already-in-use":
       return "Provided email is already used";
 
+    case "auth/invalid-credential":
+      return "Invalid login credentials";
+
     // Many more authCode mapping here...
 
     default:
