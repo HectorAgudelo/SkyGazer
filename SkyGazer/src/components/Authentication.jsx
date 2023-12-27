@@ -71,6 +71,10 @@ function Auth() {
     }
   }
 
+  function handleResetPw() {
+    navigate(`/reset`);
+  }
+
   async function register() {
     try {
       const response = await createUserWithEmailAndPassword(auth, email, pw);
@@ -301,6 +305,16 @@ function Auth() {
           <FontAwesomeIcon icon={faGoogle} className="mr-2" />
           Login with your Google account
         </button>
+        {!isRegister && (
+          <div className="flex">
+            <p
+              className="mx-5 mt-3 text-sm text-blue-600 hover:underline hover:cursor-pointer"
+              onClick={handleResetPw}
+            >
+              Forgot Password?
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );
